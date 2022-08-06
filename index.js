@@ -36,13 +36,6 @@ app.post("/form_submit", (req, res) => {
     res.send("Incorrect Email/Password");
   }
 });
-
-app.get("/logout", (req, res) => {
-  req.session.destroy(() => {
-    console.log("session destroyed");
-  });
-  res.send("logged out successfully");
-});
 app.listen(4000, (err) => {
   if (!err) console.log("listening to port 4000 :)");
 });
